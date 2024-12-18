@@ -1,0 +1,33 @@
+### Home
+GET http://localhost:3000/
+
+### Create a new report
+POST http://localhost:3000/api/v1/reports
+content-type: application/json
+
+{
+    "title": "sample",
+    "content": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "type": "Pro"
+}
+
+### Get all reports
+GET http://localhost:3000/api/v1/reports
+
+### Get reports by id
+GET http://localhost:3000/api/v1/reports/1
+
+
+### Update reports by id
+PUT http://localhost:3000/api/v1/reports/1
+content-type: application/json
+
+{
+    "title": "sample updated",
+    "content": "Thu, 22 Oct 2015 18:27:50 GMT",
+    "type": "Pro"
+}
+
+### Delete reports by id
+DELETE http://localhost:3000/api/v1/reports/1
+
