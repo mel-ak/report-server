@@ -34,6 +34,7 @@ func main() {
 	})
 
 	database.ConnectDB()
+	database.Migrate()
 
 	routes.SetupRoutes(app)
 

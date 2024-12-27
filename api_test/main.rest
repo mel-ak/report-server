@@ -1,0 +1,29 @@
+### Welcome endpoint
+GET http://localhost:3000/
+
+### get a report
+GET http://localhost:3000/api/v1/reports/1
+
+### get all reports
+GET http://localhost:3000/api/v1/reports/
+
+### create a report
+POST http://localhost:3000/api/v1/reports/
+content-type: application/json
+
+{
+    "title": "sample",
+    "content": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "type": "report"
+}
+
+### update a report
+PUT http://localhost:3000/api/v1/reports/1
+content-type: application/json
+
+{
+    "id": "2",
+    "title": "sample",
+    "content": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "type": "report"
+}
