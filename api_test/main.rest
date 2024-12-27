@@ -13,7 +13,7 @@ content-type: application/json
 
 {
     "title": "sample",
-    "content": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "content": "Here u got a report",
     "type": "report"
 }
 
@@ -22,8 +22,10 @@ PUT http://localhost:3000/api/v1/reports/1
 content-type: application/json
 
 {
-    "id": "2",
     "title": "sample",
-    "content": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "content": "update 1",
     "type": "report"
 }
+
+### delete a report
+DELETE http://localhost:3000/api/v1/reports/9
