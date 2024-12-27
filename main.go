@@ -6,11 +6,14 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/helmet"
 	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/mel-ak/report-server/config"
+	"github.com/mel-ak/report-server/database"
 	"github.com/mel-ak/report-server/routes"
 )
 
 func main() {
-	// Initialize the new fiber app
+	config.LoadEnv()
+
 	// Custom config
 	app := fiber.New(fiber.Config{
 		Prefork:       true,
@@ -29,6 +32,8 @@ func main() {
 			"message": "Welcome to the Report Backend!",
 		})
 	})
+
+	database.ConnectDB()
 
 	routes.SetupRoutes(app)
 

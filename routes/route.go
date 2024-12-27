@@ -11,9 +11,9 @@ func SetupRoutes(app *fiber.App) {
 	v1 := api.Group("/v1")          // /api/v1
 	reports := v1.Group("/reports") // /v1/reports
 
-	reports.Get("/reports", handlers.GetReports)
-	reports.Post("/reports", handlers.CreateReport)
-	reports.Get("/reports/:id", handlers.GetReport)
-	reports.Put("/reports/:id", handlers.UpdateReport)
-	reports.Delete("/reports/:id", handlers.DeleteReport)
+	reports.Get("/", handlers.GetReports)
+	reports.Post("/", handlers.CreateReport)
+	reports.Get("/:id", handlers.GetReport)
+	reports.Put("/:id", handlers.UpdateReport)
+	reports.Delete("/:id", handlers.DeleteReport)
 }
