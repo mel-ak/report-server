@@ -3,13 +3,16 @@ GET http://localhost:3000/
 
 ### get a report
 GET http://localhost:3000/api/v1/reports/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdDQuY29tIiwiZXhwIjoxNzM1NDYxMDk4LCJpZCI6MX0.31dDW7MVHHOvBKFeUzrpynE0B6OgKxKVlX7C_ywxO0o
 
 ### get all reports
 GET http://localhost:3000/api/v1/reports/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdDQuY29tIiwiZXhwIjoxNzM1NDYxMDk4LCJpZCI6MX0.31dDW7MVHHOvBKFeUzrpynE0B6OgKxKVlX7C_ywxO0o
 
 ### create a report
 POST http://localhost:3000/api/v1/reports/
 content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdDQuY29tIiwiZXhwIjoxNzM1NDYxMDk4LCJpZCI6MX0.31dDW7MVHHOvBKFeUzrpynE0B6OgKxKVlX7C_ywxO0o
 
 {
     "title": "sample",
@@ -20,6 +23,7 @@ content-type: application/json
 ### update a report
 PUT http://localhost:3000/api/v1/reports/1
 content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdDQuY29tIiwiZXhwIjoxNzM1NDYxMDk4LCJpZCI6MX0.31dDW7MVHHOvBKFeUzrpynE0B6OgKxKVlX7C_ywxO0o
 
 {
     "title": "sample",
@@ -29,16 +33,14 @@ content-type: application/json
 
 ### delete a report
 DELETE http://localhost:3000/api/v1/reports/9
-
-### Protected route
-GET http://localhost:3000/protected
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdDQuY29tIiwiZXhwIjoxNzM1NDYxMDk4LCJpZCI6MX0.31dDW7MVHHOvBKFeUzrpynE0B6OgKxKVlX7C_ywxO0o
 
 ### Login endpoint
 POST http://localhost:3000/users/login
 content-type: application/json
 
 {
-    "username": "admin",
+    "email": "test@test4.com",
     "password": "password"
 }
 
@@ -54,3 +56,6 @@ content-type: application/json
 
 ### JWT token endpoint
 GET http://localhost:3000/users/token
+
+### List of users
+GET http://localhost:3000/users
