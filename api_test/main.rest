@@ -29,3 +29,28 @@ content-type: application/json
 
 ### delete a report
 DELETE http://localhost:3000/api/v1/reports/9
+
+### Protected route
+GET http://localhost:3000/protected
+
+### Login endpoint
+POST http://localhost:3000/users/login
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "password"
+}
+
+### Register endpoint
+POST http://localhost:3000/users/register
+content-type: application/json
+
+{
+    "name": "test",
+    "password": "password",
+    "email": "test@test4.com"
+}
+
+### JWT token endpoint
+GET http://localhost:3000/users/token
