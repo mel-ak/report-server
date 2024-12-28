@@ -36,6 +36,9 @@ func main() {
 	database.ConnectDB()
 	database.Migrate()
 
+	// User routes
+	routes.SetupUserRoutes(app)
+	// Report routes
 	routes.SetupRoutes(app)
 
 	// Listening to port 3000
